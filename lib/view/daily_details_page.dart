@@ -19,15 +19,16 @@ class _DailyDetailsPageState extends State<DailyDetailsPage>with SingleTickerPro
     return Scaffold(
 
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 20),
         child:SingleChildScrollView(
           child: Column(
             children: [
               ///Day..
+
               Card(
                 elevation: 11,
                 child: Container(
-                  height: 500,
+                  height: 600,
                   width: MediaQuery.of(context).size.width,
                   color: Colors.white,
                   child: Column(
@@ -36,6 +37,7 @@ class _DailyDetailsPageState extends State<DailyDetailsPage>with SingleTickerPro
                       SizedBox(height: 12,),
                       SizedBox(
                         width: MediaQuery.of(context).size.width,
+
                         child: Column(
                           children: [
                             ElevatedButton(onPressed: (){},child: Text("Day",style: myTextStyle18(),),),
@@ -59,7 +61,7 @@ class _DailyDetailsPageState extends State<DailyDetailsPage>with SingleTickerPro
                       Expanded(
                         child: ListView.builder(
                           shrinkWrap: true,
-                          //physics: NeverScrollableScrollPhysics(),
+                          physics: NeverScrollableScrollPhysics(),
                           itemBuilder: (_,index){
                             return Column(
                               children: [
@@ -82,10 +84,11 @@ class _DailyDetailsPageState extends State<DailyDetailsPage>with SingleTickerPro
                 ),
               ),
               ///Night
+              SizedBox(height: 25,),
               Card(
                 elevation: 11,
                 child: Container(
-                  height: 500,
+                  height: 600,
                   width: MediaQuery.of(context).size.width,
                   color: Colors.white,
                   child: Column(
@@ -116,6 +119,8 @@ class _DailyDetailsPageState extends State<DailyDetailsPage>with SingleTickerPro
                       ///List View
                       Expanded(
                         child: ListView.builder(
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
                           itemBuilder: (_,index){
                             return Column(
                               children: [

@@ -114,13 +114,14 @@ class HomePage extends StatelessWidget{
                             children: AppConstData.hoursTemp.map((weatherValue){
                               return  Container(
                                 margin: EdgeInsets.all(5),
-                                height: 130,
+                                height: 150,
                                 //color: Colors.amber,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(weatherValue['h']),
                                     Image.network(weatherValue['imge'], width: 50,fit: BoxFit.cover,),
+                                    SizedBox(height: 18,),
                                     Text("${weatherValue['temp']}c"),
                                     Row(
                                       children: [
